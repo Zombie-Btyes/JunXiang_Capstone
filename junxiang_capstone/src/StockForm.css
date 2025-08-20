@@ -1,71 +1,79 @@
-/* Container */
+/* Form Container */
 .stock-form {
-  max-width: 500px;
+  max-width: 480px;
   margin: 2rem auto;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1.8rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 /* Title */
-.form-title {
-  font-size: 1.5rem;
+.stock-form h2 {
+  font-size: 1.4rem;
   font-weight: 600;
-  color: #333;
   text-align: center;
+  color: #111827;
   margin-bottom: 1.5rem;
 }
 
-/* Groups */
+/* Input Groups */
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.2rem;
 }
 
 .form-group label {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.4rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #444;
 }
 
 .form-group input {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
   font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #fff;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: #0070f3;
-  box-shadow: 0 0 5px rgba(0,112,243,0.3);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
-/* Button */
+/* Submit Button */
 .submit-btn {
+  display: inline-block;
   width: 100%;
   padding: 0.9rem;
-  background-color: #0070f3;
-  color: white;
+  background: #2563eb;
+  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.25s;
+  transition: background 0.25s, transform 0.1s;
 }
 
 .submit-btn:hover {
-  background-color: #005bb5;
+  background: #1e40af;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   .stock-form {
-    padding: 1.25rem;
+    margin: 1rem;
+    padding: 1.2rem;
   }
 }
