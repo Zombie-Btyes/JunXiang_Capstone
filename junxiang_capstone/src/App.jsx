@@ -1,49 +1,18 @@
-import { useState } from "react";
-import StockForm from "./StockForm";
-import StockTable from "./StockTable";
-import StockChanger from "./StockChanger";
+import StockForm from "./components/StockForm";
+import StockList from "./components/StockList";
+import { StockProvider } from "./context/StockContext";
+import "./App.css";
 
 function App() {
-  const [stocks, setStocks] = useState([]);
-
-  // Add stock from form
-  const addStock = (stock) => {
-    setStocks([...stocks, stock]);
-  };
-
-  // Remove stock by index
-  const removeStock = (index) => {
-    const updated = stocks.filter((_, i) => i !== index);
-    setStocks(updated);
-  };
-
   return (
-    <>
-      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
-        Stock Dashboard
-      </h1>
-
-      {/* Stock input form */}
-      <StockForm onAdd={addStock} />
-
-      {/* Render all stocks */}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-        {stocks.map((stock, index) => (
-          <StockTable
-            key={index}
-            symbol={stock.symbol}
-            quantity={stock.quantity}
-            purchasePrice={stock.purchasePrice}
-            onRemove={() => removeStock(index)}
-          />
-        ))}
+    <StockProvider>
+      <div className="p-6">
+        <h1>Finance Dashboard</h1>
+        <StockForm />
+        <h2>Stock List</h2>
+        <StockList />
       </div>
-
-      {/* Example StockChange */}
-      <div style={{ marginTop: "30px" }}>
-        <StockChanger stockFrom="AAPL" stockTo="MSFT" />
-      </div>
-    </>
+    </StockProvider>
   );
 }
 
