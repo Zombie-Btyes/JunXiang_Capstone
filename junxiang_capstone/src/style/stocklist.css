@@ -1,0 +1,49 @@
+.stock-Container {
+  padding: 1rem;
+}
+
+.stock-Container h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.stock-table th,
+.stock-table td {
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.stock-table th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+.stock-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.stock-table tr:hover {
+  background: #eef2ff;
+  transition: background 0.2s;
+}
+
+.profit {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.loss {
+  color: #dc2626;
+  font-weight: 600;
+}
